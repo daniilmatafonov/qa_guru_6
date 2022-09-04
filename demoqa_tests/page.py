@@ -62,12 +62,12 @@ class RegistrationForm:
         browser.element('#currentAddress').type(param)
         return self
 
-    def set_state(self, param):
-        browser.element('#state').type(param)
+    def set_state(self, value: str):
+        Dropdown(browser.element('#state')).select(value)
         return self
 
-    def set_city(self, param):
-        browser.element('#city').autocomplete(param)
+    def set_city(self, value: str):
+        Dropdown(browser.element('#city')).autocomplete(value)
         return self
 
     @staticmethod
