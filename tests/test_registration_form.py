@@ -14,7 +14,7 @@ def test_registration_form():
      .set_picture('fry.jpeg')
      .set_address('Love street')
      .set_state('Haryana')
-     .submit_form()
+     .submit()
      )
 
     # check results

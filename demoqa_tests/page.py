@@ -69,3 +69,7 @@ class RegistrationForm:
     def set_city(self, city_name):
         Dropdown(browser.element('#city')).autocomplete(option=city_name)
         return self
+
+    @staticmethod
+    def submit():
+        browser.element('#submit').perform(command.js.click)
